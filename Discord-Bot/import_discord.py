@@ -39,18 +39,26 @@ async def host(ctx):
 @client.command()
 async def unreserve(ctx):
     channel = client.get_channel(1229703484992000032)
-    with open('ReservedUsers.txt', 'r') as f:
-        f.read(int())
+
+    with open('ReservedUsers.txt', 'w') as f: #FINISH------------------------------------------------------------------------
+        if str(ctx.author.id) in f.read():
+            ctx.author.id
+            
     
 
 @client.command()
 #@commands.has_role('Goblin') ..........................................................
 async def reserve_USA(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
     channel = client.get_channel(1229703484992000032)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
-    author = (ctx.author.id)
 
     with open("ReservedUsers.txt", "w") as f:
         f.write(str(author))
@@ -68,11 +76,16 @@ async def reserve_USA(ctx):
 
 @client.command()
 async def reserve_UK(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+        
     channel = client.get_channel(1229703484992000032)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
-    author = (ctx.author.id)
     
     with open("ReservedUsers.txt", "w") as f:
         f.write(str(author))
@@ -90,11 +103,16 @@ async def reserve_UK(ctx):
 
 @client.command()
 async def reserve_France(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
     channel = client.get_channel(1229703484992000032)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
-    author = (ctx.author.id)
 
     with open("ReservedUsers.txt", "w") as f:
         f.write(str(author))
@@ -112,11 +130,16 @@ async def reserve_France(ctx):
 
 @client.command()
 async def reserve_Germany(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
     channel = client.get_channel(1229703484992000032)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
-    author = (ctx.author.id)
     
     with open("ReservedUsers.txt", "w") as f:
         f.write(str(author))
@@ -134,11 +157,16 @@ async def reserve_Germany(ctx):
 
 @client.command()
 async def reserve_Japan(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
     channel = client.get_channel(1229703484992000032)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
-    author = (ctx.author.id)
     
     with open("ReservedUsers.txt", "w") as f:
         f.write(str(author))
@@ -156,11 +184,16 @@ async def reserve_Japan(ctx):
 
 @client.command()
 async def reserve_Italy(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
     channel = client.get_channel(1229703484992000032)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
-    author = (ctx.author.id)
     
     with open("ReservedUsers.txt", "w") as f:
         f.write(str(author))
@@ -178,11 +211,16 @@ async def reserve_Italy(ctx):
 
 @client.command()
 async def reserve_USSR(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
     channel = client.get_channel(1229703484992000032)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
-    author = (ctx.author.id)
     
     with open("ReservedUsers.txt", "w") as f:
         f.write(str(author))
@@ -200,11 +238,16 @@ async def reserve_USSR(ctx):
 
 @client.command()
 async def reserve_Poland(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
     channel = client.get_channel(1229703484992000032)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
-    author = (ctx.author.id)
 
     with open("ReservedUsers.txt", "w") as f:
         f.write(str(author))
@@ -222,11 +265,16 @@ async def reserve_Poland(ctx):
 
 @client.command()
 async def reserve_China(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
     channel = client.get_channel(1229703484992000032)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
-    author = (ctx.author.id)
     
     with open("ReservedUsers.txt", "w") as f:
         f.write(str(author))
