@@ -38,6 +38,7 @@ async def host(ctx):
     
 @client.command()
 async def unreserve(ctx):
+    author = (ctx.author.id)
     channel = client.get_channel(1229703484992000032)
 
     with open('ReservedUsers.txt', 'w') as f: #FINISH------------------------------------------------------------------------
