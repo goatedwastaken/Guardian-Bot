@@ -1567,14 +1567,14 @@ async def reserve_Argentina(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    argentina_field = country_embed.fields[1]
-    country_embed.remove_field(1)
+    argentina_field = country_embed.fields[0]
+    country_embed.remove_field(0)
     new_value = ""
     if  argentina_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{ argentina_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(1, name= argentina_field.name, value=new_value)
+    country_embed.insert_field_at(0, name= argentina_field.name, value=new_value)
     await message.edit(embed=country_embed)
 @client.command()
 async def reserve_Bolivia(ctx):
@@ -1593,14 +1593,14 @@ async def reserve_Bolivia(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    bolivia_field = country_embed.fields[2]
-    country_embed.remove_field(2)
+    bolivia_field = country_embed.fields[1]
+    country_embed.remove_field(1)
     new_value = ""
     if   bolivia_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{bolivia_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(2, name=bolivia_field.name, value=new_value)
+    country_embed.insert_field_at(1, name=bolivia_field.name, value=new_value)
     await message.edit(embed=country_embed)
 
 @client.command()
@@ -1620,14 +1620,14 @@ async def reserve_Brazil(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    brazil_field = country_embed.fields[3]
-    country_embed.remove_field(3)
+    brazil_field = country_embed.fields[2]
+    country_embed.remove_field(2)
     new_value = ""
     if  brazil_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{ brazil_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(3, name= brazil_field.name, value=new_value)
+    country_embed.insert_field_at(2, name= brazil_field.name, value=new_value)
     await message.edit(embed=country_embed)
 
 @client.command()
@@ -1647,14 +1647,14 @@ async def reserve_Chile(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    chile_field = country_embed.fields[4]
-    country_embed.remove_field(4)
+    chile_field = country_embed.fields[3]
+    country_embed.remove_field(3)
     new_value = ""
     if  chile_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{ chile_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(4, name= chile_field.name, value=new_value)
+    country_embed.insert_field_at(3, name= chile_field.name, value=new_value)
     await message.edit(embed=country_embed)
 
 @client.command()
@@ -1674,14 +1674,14 @@ async def reserve_Colombia(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    colombia_field = country_embed.fields[5]
-    country_embed.remove_field(5)
+    colombia_field = country_embed.fields[4]
+    country_embed.remove_field(4)
     new_value = ""
     if  colombia_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{ colombia_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(5, name= colombia_field.name, value=new_value)
+    country_embed.insert_field_at(4, name= colombia_field.name, value=new_value)
     await message.edit(embed=country_embed)
 
 @client.command()
@@ -1701,14 +1701,14 @@ async def reserve_Cuba(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    cuba_field = country_embed.fields[6]
-    country_embed.remove_field(6)
+    cuba_field = country_embed.fields[5]
+    country_embed.remove_field(5)
     new_value = ""
     if  cuba_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{ cuba_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(6, name= cuba_field.name, value=new_value)
+    country_embed.insert_field_at(5, name= cuba_field.name, value=new_value)
     await message.edit(embed=country_embed)
 
 @client.command()
@@ -1728,14 +1728,14 @@ async def reserve_Dominica(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    dominica_field = country_embed.fields[7]
-    country_embed.remove_field(7)
+    dominica_field = country_embed.fields[6]
+    country_embed.remove_field(6)
     new_value = ""
     if  dominica_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{ dominica_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(7, name= dominica_field.name, value=new_value)
+    country_embed.insert_field_at(6, name= dominica_field.name, value=new_value)
     await message.edit(embed=country_embed)
 
 @client.command()
@@ -1755,14 +1755,14 @@ async def reserve_Ecuador(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    ecuador_field = country_embed.fields[8]
-    country_embed.remove_field(8)
+    ecuador_field = country_embed.fields[7]
+    country_embed.remove_field(7)
     new_value = ""
     if  ecuador_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{ ecuador_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(8, name= ecuador_field.name, value=new_value)
+    country_embed.insert_field_at(7, name= ecuador_field.name, value=new_value)
     await message.edit(embed=country_embed)
 
 @client.command()
@@ -1782,14 +1782,14 @@ async def reserve_El_Salvador(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    el_salvador_field = country_embed.fields[9]
-    country_embed.remove_field(9)
+    el_salvador_field = country_embed.fields[8]
+    country_embed.remove_field(8)
     new_value = ""
     if  el_salvador_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{ el_salvador_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(9, name= el_salvador_field.name, value=new_value)
+    country_embed.insert_field_at(8, name= el_salvador_field.name, value=new_value)
     await message.edit(embed=country_embed)
 
 @client.command()
@@ -1809,14 +1809,14 @@ async def reserve_Guatamela(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    guatamela_field = country_embed.fields[10]
-    country_embed.remove_field(10)
+    guatamela_field = country_embed.fields[9]
+    country_embed.remove_field(9)
     new_value = ""
     if  guatamela_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{ guatamela_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(10, name= guatamela_field.name, value=new_value)
+    country_embed.insert_field_at(9, name= guatamela_field.name, value=new_value)
     await message.edit(embed=country_embed)
 
 @client.command()
@@ -1836,14 +1836,14 @@ async def reserve_Haiti(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    haiti_field = country_embed.fields[11]
-    country_embed.remove_field(11)
+    haiti_field = country_embed.fields[10]
+    country_embed.remove_field(10)
     new_value = ""
     if  haiti_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{ haiti_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(11, name= haiti_field.name, value=new_value)
+    country_embed.insert_field_at(10, name= haiti_field.name, value=new_value)
     await message.edit(embed=country_embed)
 
 @client.command()
@@ -1863,14 +1863,14 @@ async def reserve_Honduras(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    honduras_field = country_embed.fields[12]
-    country_embed.remove_field(12)
+    honduras_field = country_embed.fields[11]
+    country_embed.remove_field(11)
     new_value = ""
     if   honduras_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{  honduras_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(12, name= honduras_field.name, value=new_value)
+    country_embed.insert_field_at(11, name= honduras_field.name, value=new_value)
     await message.edit(embed=country_embed)
 
 @client.command()
@@ -1890,14 +1890,14 @@ async def reserve_Mexico(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    mexico_field = country_embed.fields[13]
-    country_embed.remove_field(13)
+    mexico_field = country_embed.fields[12]
+    country_embed.remove_field(12)
     new_value = ""
     if  mexico_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{ mexico_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(13, name= mexico_field.name, value=new_value)
+    country_embed.insert_field_at(12, name= mexico_field.name, value=new_value)
     await message.edit(embed=country_embed)
 
 @client.command()
@@ -1917,14 +1917,14 @@ async def reserve_Paraguay(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    paraguay_field = country_embed.fields[14]
-    country_embed.remove_field(14)
+    paraguay_field = country_embed.fields[13]
+    country_embed.remove_field(13)
     new_value = ""
     if  paraguay_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{paraguay_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(14, name=paraguay_field.name, value=new_value)
+    country_embed.insert_field_at(13, name=paraguay_field.name, value=new_value)
     await message.edit(embed=country_embed)
 
 @client.command()
@@ -1944,14 +1944,14 @@ async def reserve_Peru(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    peru_field = country_embed.fields[15]
-    country_embed.remove_field(15)
+    peru_field = country_embed.fields[14]
+    country_embed.remove_field(14)
     new_value = ""
     if  peru_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{ peru_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(15, name= peru_field.name, value=new_value)
+    country_embed.insert_field_at(14, name= peru_field.name, value=new_value)
     await message.edit(embed=country_embed)
 
 @client.command()
@@ -1971,14 +1971,14 @@ async def reserve_Uruguay(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    uruguay_field = country_embed.fields[16]
-    country_embed.remove_field(16)
+    uruguay_field = country_embed.fields[15]
+    country_embed.remove_field(15)
     new_value = ""
     if uruguay_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{uruguay_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(16, name=uruguay_field.name, value=new_value)
+    country_embed.insert_field_at(15, name=uruguay_field.name, value=new_value)
     await message.edit(embed=country_embed)
     
 @client.command()
@@ -1998,14 +1998,14 @@ async def reserve_Venezuela(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    venezuela_field = country_embed.fields[17]
-    country_embed.remove_field(17)
+    venezuela_field = country_embed.fields[16]
+    country_embed.remove_field(16)
     new_value = ""
     if venezuela_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{venezuela_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(17, name=venezuela_field.name, value=new_value)
+    country_embed.insert_field_at(16, name=venezuela_field.name, value=new_value)
     await message.edit(embed=country_embed)
     
 @client.command()
@@ -2025,14 +2025,14 @@ async def reserve_Panama(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    panama_field = country_embed.fields[18]
-    country_embed.remove_field(18)
+    panama_field = country_embed.fields[17]
+    country_embed.remove_field(17)
     new_value = ""
     if panama_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{panama_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(18, name=panama_field.name, value=new_value)
+    country_embed.insert_field_at(17, name=panama_field.name, value=new_value)
     await message.edit(embed=country_embed)
     
 @client.command()
@@ -2052,14 +2052,14 @@ async def reserve_Costa_Rica(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    costa_rica_field = country_embed.fields[19]
-    country_embed.remove_field(19)
+    costa_rica_field = country_embed.fields[18]
+    country_embed.remove_field(18)
     new_value = ""
     if costa_rica_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{costa_rica_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(19, name=costa_rica_field.name, value=new_value)
+    country_embed.insert_field_at(18, name=costa_rica_field.name, value=new_value)
     await message.edit(embed=country_embed)
     
 @client.command()
@@ -2079,14 +2079,14 @@ async def reserve_Nicaragua(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    nicaragua_field = country_embed.fields[20]
-    country_embed.remove_field(20)
+    nicaragua_field = country_embed.fields[19]
+    country_embed.remove_field(19)
     new_value = ""
     if nicaragua_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{nicaragua_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(20, name=nicaragua_field.name, value=new_value)
+    country_embed.insert_field_at(19, name=nicaragua_field.name, value=new_value)
     await message.edit(embed=country_embed)
     
 @client.command()
@@ -2106,14 +2106,14 @@ async def reserve_Canada(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    canada_field = country_embed.fields[20]
-    country_embed.remove_field(20)
+    canada_field = country_embed.fields[21]
+    country_embed.remove_field(21)
     new_value = ""
     if canada_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{canada_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(20, name=canada_field.name, value=new_value)
+    country_embed.insert_field_at(21, name=canada_field.name, value=new_value)
     await message.edit(embed=country_embed)
 
 #Asia
@@ -2593,14 +2593,14 @@ async def reserve_Tannu_Tuva(ctx):
         f.write(str(author) + "\n")
 
     country_embed = message.embeds[0]
-    tannu_tuva_field = country_embed.fields[18]
-    country_embed.remove_field(18)
+    tannu_tuva_field = country_embed.fields[0]
+    country_embed.remove_field(0)
     new_value = ""
     if  tannu_tuva_field.value == "N/A":
         new_value = (f"<@{author}>")
     else:
         new_value = f"{ tannu_tuva_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(18, name= tannu_tuva_field.name, value=new_value)
+    country_embed.insert_field_at(0, name= tannu_tuva_field.name, value=new_value)
     await message.edit(embed=country_embed)
     
 
