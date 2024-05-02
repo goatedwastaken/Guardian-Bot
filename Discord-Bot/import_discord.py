@@ -1549,7 +1549,7 @@ async def reserve_Switzerland(ctx):
     await message.edit(embed=country_embed)
 
 #Americas   
-
+    
 @client.command()
 async def reserve_Argentina(ctx):
 
@@ -2117,6 +2117,34 @@ async def reserve_Canada(ctx):
     await message.edit(embed=country_embed)
 
 #Asia
+
+@client.command()
+async def reserve_Tannu_Tuva(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message4.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    tannu_tuva_field = country_embed.fields[0]
+    country_embed.remove_field(0)
+    new_value = ""
+    if  tannu_tuva_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{ tannu_tuva_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(0, name= tannu_tuva_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+
 @client.command()
 async def reserve_Mongolia(ctx):
 
@@ -2574,33 +2602,6 @@ async def reserve_Ethiopia(ctx):
     else:
         new_value = f"{ethiopia_field.value}\n" + (f"<@{author}>")
     country_embed.insert_field_at(17, name=ethiopia_field.name, value=new_value)
-    await message.edit(embed=country_embed)
-    
-@client.command()
-async def reserve_Tannu_Tuva(ctx):
-
-    author = (ctx.author.id)
-    with open("ReservedUsers.txt") as f:
-        if str(author) in f.read():
-            return
-    
-    channel = client.get_channel(1229703484992000032)
-    with open("message4.txt", "r") as f:
-        message_id = int(f.read())
-    message = await channel.fetch_message(message_id)
-    
-    with open("ReservedUsers.txt", "a") as f:
-        f.write(str(author) + "\n")
-
-    country_embed = message.embeds[0]
-    tannu_tuva_field = country_embed.fields[0]
-    country_embed.remove_field(0)
-    new_value = ""
-    if  tannu_tuva_field.value == "N/A":
-        new_value = (f"<@{author}>")
-    else:
-        new_value = f"{ tannu_tuva_field.value}\n" + (f"<@{author}>")
-    country_embed.insert_field_at(0, name= tannu_tuva_field.name, value=new_value)
     await message.edit(embed=country_embed)
     
 
