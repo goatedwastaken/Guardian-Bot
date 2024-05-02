@@ -1545,7 +1545,1060 @@ async def reserve_Switzerland(ctx):
         new_value = f"{switzerland_field.value}\n" + (f"<@{author}>")
     country_embed.insert_field_at(23, name=switzerland_field.name, value=new_value)
     await message.edit(embed=country_embed)
+#Asia
+@client.command()
+async def reserve_Mongolia(ctx):
 
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message4.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    mongolia_field = country_embed.fields[1]
+    country_embed.remove_field(1)
+    new_value = ""
+    if mongolia_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{mongolia_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(1, name=mongolia_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_Manchukuo(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message4.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    manchukuo_field = country_embed.fields[2]
+    country_embed.remove_field(2)
+    new_value = ""
+    if manchukuo_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{manchukuo_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(2, name=manchukuo_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_Mengkukuo(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message4.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    mengkukuo_field = country_embed.fields[3]
+    country_embed.remove_field(3)
+    new_value = ""
+    if mengkukuo_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{mengkukuo_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(3, name=mengkukuo_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_PRC(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message4.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    prc_field = country_embed.fields[4]
+    country_embed.remove_field(4)
+    new_value = ""
+    if prc_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{prc_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(4, name=prc_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_Indochina(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message4.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    indochina_field = country_embed.fields[5]
+    country_embed.remove_field(5)
+    new_value = ""
+    if indochina_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{indochina_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(5, name=indochina_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_Siam(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message4.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    siam_field = country_embed.fields[6]
+    country_embed.remove_field(6)
+    new_value = ""
+    if siam_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{siam_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(6, name=siam_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_British_Raj(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message4.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    british_raj_field = country_embed.fields[7]
+    country_embed.remove_field(7)
+    new_value = ""
+    if british_raj_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{british_raj_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(7, name=british_raj_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_Australia(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message4.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    australia_field = country_embed.fields[8]
+    country_embed.remove_field(8)
+    new_value = ""
+    if australia_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{ australia_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(8, name= australia_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_Malaya(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message4.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    malaya_field = country_embed.fields[9]
+    country_embed.remove_field(9)
+    new_value = ""
+    if malaya_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{malaya_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(9, name=malaya_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+
+@client.command()
+async def reserve_Indonesia(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message4.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    indonesia_field = country_embed.fields[10]
+    country_embed.remove_field(10)
+    new_value = ""
+    if indonesia_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{indonesia_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(10, name=indonesia_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_Afghanistan(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message4.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    afghanistan_field = country_embed.fields[11]
+    country_embed.remove_field(11)
+    new_value = ""
+    if afghanistan_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{afghanistan_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(11, name=afghanistan_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_Iran(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message4.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    iran_field = country_embed.fields[12]
+    country_embed.remove_field(12)
+    new_value = ""
+    if iran_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{iran_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(12, name=iran_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_Iraq(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message4.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    iraq_field = country_embed.fields[13]
+    country_embed.remove_field(13)
+    new_value = ""
+    if  iraq_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{ iraq_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(13, name= iraq_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_Palestine(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message4.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    palestine_field = country_embed.fields[14]
+    country_embed.remove_field(14)
+    new_value = ""
+    if  palestine_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{palestine_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(14, name= palestine_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_Egypt(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message4.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    egypt_field = country_embed.fields[15]
+    country_embed.remove_field(15)
+    new_value = ""
+    if egypt_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{egypt_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(15, name=egypt_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_South_Africa(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message4.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    south_africa_field = country_embed.fields[16]
+    country_embed.remove_field(16)
+    new_value = ""
+    if south_africa_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{south_africa_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(16, name=south_africa_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_Ethiopia(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message4.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    ethiopia_field = country_embed.fields[17]
+    country_embed.remove_field(17)
+    new_value = ""
+    if ethiopia_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{ethiopia_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(17, name=ethiopia_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_Tannu_Tuva(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message4.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    tannu_tuva_field = country_embed.fields[18]
+    country_embed.remove_field(18)
+    new_value = ""
+    if  tannu_tuva_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{ tannu_tuva_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(18, name= tannu_tuva_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+#Americas   
+
+@client.command()
+async def reserve_Argentina(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    argentina_field = country_embed.fields[1]
+    country_embed.remove_field(1)
+    new_value = ""
+    if  argentina_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{ argentina_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(1, name= argentina_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+@client.command()
+async def reserve_Bolivia(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    bolivia_field = country_embed.fields[2]
+    country_embed.remove_field(2)
+    new_value = ""
+    if   bolivia_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{bolivia_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(2, name=bolivia_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+
+@client.command()
+async def reserve_Brazil(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    brazil_field = country_embed.fields[3]
+    country_embed.remove_field(3)
+    new_value = ""
+    if  brazil_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{ brazil_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(3, name= brazil_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+
+@client.command()
+async def reserve_Chile(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    chile_field = country_embed.fields[4]
+    country_embed.remove_field(4)
+    new_value = ""
+    if  chile_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{ chile_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(4, name= chile_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+
+@client.command()
+async def reserve_Colombia(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    colombia_field = country_embed.fields[5]
+    country_embed.remove_field(5)
+    new_value = ""
+    if  colombia_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{ colombia_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(5, name= colombia_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+
+@client.command()
+async def reserve_Cuba(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    cuba_field = country_embed.fields[6]
+    country_embed.remove_field(6)
+    new_value = ""
+    if  cuba_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{ cuba_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(6, name= cuba_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+
+@client.command()
+async def reserve_Dominica(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    dominica_field = country_embed.fields[7]
+    country_embed.remove_field(7)
+    new_value = ""
+    if  dominica_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{ dominica_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(7, name= dominica_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+
+@client.command()
+async def reserve_Ecuador(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    ecuador_field = country_embed.fields[8]
+    country_embed.remove_field(8)
+    new_value = ""
+    if  ecuador_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{ ecuador_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(8, name= ecuador_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+
+@client.command()
+async def reserve_El_Salvador(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    el_salvador_field = country_embed.fields[9]
+    country_embed.remove_field(9)
+    new_value = ""
+    if  el_salvador_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{ el_salvador_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(9, name= el_salvador_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+
+@client.command()
+async def reserve_Guatamela(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    guatamela_field = country_embed.fields[10]
+    country_embed.remove_field(10)
+    new_value = ""
+    if  guatamela_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{ guatamela_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(10, name= guatamela_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+
+@client.command()
+async def reserve_Haiti(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    haiti_field = country_embed.fields[11]
+    country_embed.remove_field(11)
+    new_value = ""
+    if  haiti_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{ haiti_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(11, name= haiti_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+
+@client.command()
+async def reserve_Honduras(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    honduras_field = country_embed.fields[12]
+    country_embed.remove_field(12)
+    new_value = ""
+    if   honduras_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{  honduras_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(12, name= honduras_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+
+@client.command()
+async def reserve_Mexico(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    mexico_field = country_embed.fields[13]
+    country_embed.remove_field(13)
+    new_value = ""
+    if  mexico_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{ mexico_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(13, name= mexico_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+
+@client.command()
+async def reserve_Paraguay(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    paraguay_field = country_embed.fields[14]
+    country_embed.remove_field(14)
+    new_value = ""
+    if  paraguay_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{paraguay_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(14, name=paraguay_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+
+@client.command()
+async def reserve_Peru(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    peru_field = country_embed.fields[15]
+    country_embed.remove_field(15)
+    new_value = ""
+    if  peru_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{ peru_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(15, name= peru_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+
+@client.command()
+async def reserve_Uruguay(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    uruguay_field = country_embed.fields[16]
+    country_embed.remove_field(16)
+    new_value = ""
+    if uruguay_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{uruguay_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(16, name=uruguay_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_Venezuela(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    venezuela_field = country_embed.fields[17]
+    country_embed.remove_field(17)
+    new_value = ""
+    if venezuela_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{venezuela_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(17, name=venezuela_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_Panama(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    panama_field = country_embed.fields[18]
+    country_embed.remove_field(18)
+    new_value = ""
+    if panama_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{panama_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(18, name=panama_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_Costa_Rica(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    costa_rica_field = country_embed.fields[19]
+    country_embed.remove_field(19)
+    new_value = ""
+    if costa_rica_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{costa_rica_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(19, name=costa_rica_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_Nicaragua(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    nicaragua_field = country_embed.fields[20]
+    country_embed.remove_field(20)
+    new_value = ""
+    if nicaragua_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{nicaragua_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(20, name=nicaragua_field.name, value=new_value)
+    await message.edit(embed=country_embed)
+    
+@client.command()
+async def reserve_Canada(ctx):
+
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            return
+    
+    channel = client.get_channel(1229703484992000032)
+    with open("message3.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+    
+    with open("ReservedUsers.txt", "a") as f:
+        f.write(str(author) + "\n")
+
+    country_embed = message.embeds[0]
+    canada_field = country_embed.fields[21]
+    country_embed.remove_field(21)
+    new_value = ""
+    if canada_field.value == "N/A":
+        new_value = (f"<@{author}>")
+    else:
+        new_value = f"{canada_field.value}\n" + (f"<@{author}>")
+    country_embed.insert_field_at(21, name=canada_field.name, value=new_value)
+    await message.edit(embed=country_embed)
 
 #Ending
 
