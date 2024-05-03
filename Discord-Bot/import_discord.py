@@ -11,6 +11,33 @@ intents = discord.Intents.all()
 client = commands.Bot(command_prefix='!', intents = intents)
 tree = app_commands.CommandTree
 
+global usa_res
+usa_res = False
+
+global uk_res
+uk_res = False
+
+global france_res
+france_res = False
+
+global germany_res
+germany_res = False
+
+global japan_res
+japan_res = False
+
+global italy_res
+italy_res = False
+
+global ussr_res
+ussr_res = False
+
+global china_res
+china_res = False
+
+global poland_res
+poland_res = False
+
 @client.event
 async def on_ready():
     print("The bot is now ready")
@@ -41,7 +68,7 @@ async def host(ctx, time=None):
     with open('message0.txt', 'w') as f:
         f.write(str(message.id))
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message0.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -56,7 +83,7 @@ async def host(ctx, time=None):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message0.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -71,7 +98,7 @@ async def host(ctx, time=None):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message0.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -80,13 +107,13 @@ async def host(ctx, time=None):
     country_embed.remove_field(2)
     new_value = ""
     if rules_field.value == "N/A":
-        new_value = "RULES!!!"
+        new_value = "https://docs.google.com/document/d/1W_tkNrsK-4aX4sYHCyexLi0D39VLSs5AZrnqu2tcfs8/edit?usp=sharing"
         country_embed.insert_field_at(2, name=rules_field.name, value=new_value)
         await message.edit(embed=country_embed)
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message0.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -95,7 +122,7 @@ async def host(ctx, time=None):
     country_embed.remove_field(3)
     new_value = ""
     if mods_field.value == "N/A":
-        new_value = "MODS!!!"
+        new_value = "https://steamcommunity.com/sharedfiles/filedetails/?id=2790635823 \n https://steamcommunity.com/sharedfiles/filedetails/?id=820260968"
         country_embed.insert_field_at(3, name=mods_field.name, value=new_value)
         await message.edit(embed=country_embed)
     else:
@@ -137,8 +164,8 @@ async def host(ctx, time=None):
     with open('message4.txt', 'w') as f:
         f.write(str(message.id))
 
-    channel = client.get_channel(1229703484992000032)
-    message = await channel.send("To reserve, do 'reserve_(nation)'. The command is case-sensitive! To unreserve, do !unreserve. The bot is slow, by the way.")
+    channel = client.get_channel(1235632818814718005)
+    message = await channel.send("To reserve, do '!reserve_(nation)' in any chat. The command is case-sensitive! To unreserve, do !unreserve. The bot is slow, by the way.")
     with open('message5.txt', 'w') as f:
         f.write(str(message.id))
     
@@ -150,7 +177,7 @@ async def unreserve(ctx):
     channel = client.get_channel(int(this_channel))
     await channel.send(f"<@{ctx.author.id}> Please wait...")
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -162,11 +189,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(0, name=usa_field.name, value=new_value)
         await message.edit(embed=country_embed)
-        pass
+        global usa_res
+        usa_res = False
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -181,7 +209,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -196,7 +224,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -211,7 +239,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -226,7 +254,7 @@ async def unreserve(ctx):
     else:
         pass
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -241,7 +269,7 @@ async def unreserve(ctx):
     else:
         pass
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -256,7 +284,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -271,7 +299,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -288,7 +316,7 @@ async def unreserve(ctx):
 
     #Europe Minors
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -303,7 +331,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -318,7 +346,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -333,7 +361,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -348,7 +376,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -363,7 +391,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -378,7 +406,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -393,7 +421,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -408,7 +436,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -423,7 +451,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -438,7 +466,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -453,7 +481,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -468,7 +496,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -483,7 +511,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -498,7 +526,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -513,7 +541,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -528,7 +556,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -543,7 +571,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -558,7 +586,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -573,7 +601,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -588,7 +616,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -603,7 +631,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -618,7 +646,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -633,7 +661,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -648,7 +676,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -663,7 +691,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -678,7 +706,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -693,7 +721,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -708,7 +736,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -723,7 +751,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -738,7 +766,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -753,7 +781,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -768,7 +796,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -783,7 +811,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -798,7 +826,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -813,7 +841,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -828,7 +856,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -843,7 +871,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -858,7 +886,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -873,7 +901,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -888,7 +916,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -903,7 +931,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -918,7 +946,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -933,7 +961,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -948,7 +976,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -963,7 +991,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -978,7 +1006,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -993,7 +1021,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1008,7 +1036,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1023,7 +1051,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1038,7 +1066,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1053,7 +1081,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1068,7 +1096,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1083,7 +1111,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1098,7 +1126,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1113,7 +1141,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1128,7 +1156,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1143,7 +1171,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1158,7 +1186,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1173,7 +1201,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1188,7 +1216,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1203,7 +1231,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1218,7 +1246,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1254,13 +1282,24 @@ async def unreserve(ctx):
 @client.command()
 async def reserve_USA(ctx):
 
+    global usa_res
+
+    if usa_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        usa_res = True
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1295,7 +1334,7 @@ async def reserve_UK(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
         
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1330,7 +1369,7 @@ async def reserve_France(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1365,7 +1404,7 @@ async def reserve_Germany(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1400,7 +1439,7 @@ async def reserve_Japan(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1435,7 +1474,7 @@ async def reserve_Italy(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1470,7 +1509,7 @@ async def reserve_USSR(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1505,7 +1544,7 @@ async def reserve_Poland(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1540,7 +1579,7 @@ async def reserve_China(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1577,7 +1616,7 @@ async def reserve_Sweden(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1599,6 +1638,10 @@ async def reserve_Sweden(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Sweden!")
+
 @client.command()
 async def reserve_Norway(ctx):
 
@@ -1608,7 +1651,7 @@ async def reserve_Norway(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1630,6 +1673,10 @@ async def reserve_Norway(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Norway!")
+
 @client.command()
 async def reserve_Finland(ctx):
 
@@ -1639,7 +1686,7 @@ async def reserve_Finland(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1661,6 +1708,10 @@ async def reserve_Finland(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Finland!")
+
 @client.command()
 async def reserve_Denmark(ctx):
 
@@ -1670,7 +1721,7 @@ async def reserve_Denmark(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1692,6 +1743,10 @@ async def reserve_Denmark(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Denmark!")
+
 @client.command()
 async def reserve_Estonia(ctx):
 
@@ -1701,7 +1756,7 @@ async def reserve_Estonia(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1723,6 +1778,10 @@ async def reserve_Estonia(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Estonia!")
+
 @client.command()
 async def reserve_Latvia(ctx):
 
@@ -1732,7 +1791,7 @@ async def reserve_Latvia(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1754,6 +1813,10 @@ async def reserve_Latvia(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Latvia!")
+
 @client.command()
 async def reserve_Lithuania(ctx):
 
@@ -1763,7 +1826,7 @@ async def reserve_Lithuania(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1785,6 +1848,10 @@ async def reserve_Lithuania(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Lithuania!")
+
 @client.command()
 async def reserve_Netherlands(ctx):
 
@@ -1794,7 +1861,7 @@ async def reserve_Netherlands(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1816,6 +1883,10 @@ async def reserve_Netherlands(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for the Netherlands!")
+
 @client.command()
 async def reserve_Belgium(ctx):
 
@@ -1825,7 +1896,7 @@ async def reserve_Belgium(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1847,6 +1918,10 @@ async def reserve_Belgium(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Belgium!")
+
 @client.command()
 async def reserve_Luxembourg(ctx):
 
@@ -1856,7 +1931,7 @@ async def reserve_Luxembourg(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1878,6 +1953,10 @@ async def reserve_Luxembourg(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Luxembourg!")
+
 @client.command()
 async def reserve_Ireland(ctx):
 
@@ -1887,7 +1966,7 @@ async def reserve_Ireland(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1909,6 +1988,10 @@ async def reserve_Ireland(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Ireland!")
+
 @client.command()
 async def reserve_Iceland(ctx):
 
@@ -1918,7 +2001,7 @@ async def reserve_Iceland(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1940,6 +2023,10 @@ async def reserve_Iceland(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Iceland!")
+
 @client.command()
 async def reserve_Czechoslovakia(ctx):
 
@@ -1949,7 +2036,7 @@ async def reserve_Czechoslovakia(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1971,6 +2058,10 @@ async def reserve_Czechoslovakia(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Czechoslovakia!")
+
 @client.command()
 async def reserve_Austria(ctx):
 
@@ -1980,7 +2071,7 @@ async def reserve_Austria(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2002,6 +2093,10 @@ async def reserve_Austria(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Austria!")
+
 @client.command()
 async def reserve_Hungary(ctx):
 
@@ -2011,7 +2106,7 @@ async def reserve_Hungary(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2033,6 +2128,10 @@ async def reserve_Hungary(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Hungary!")
+
 @client.command()
 async def reserve_Romania(ctx):
 
@@ -2042,7 +2141,7 @@ async def reserve_Romania(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2064,6 +2163,10 @@ async def reserve_Romania(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Romania!")
+
 @client.command()
 async def reserve_Yugoslavia(ctx):
 
@@ -2073,7 +2176,7 @@ async def reserve_Yugoslavia(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2095,6 +2198,10 @@ async def reserve_Yugoslavia(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Yugoslavia!")
+
 @client.command()
 async def reserve_Bulgaria(ctx):
 
@@ -2104,7 +2211,7 @@ async def reserve_Bulgaria(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2126,6 +2233,10 @@ async def reserve_Bulgaria(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Bulgaria!")
+
 @client.command()
 async def reserve_Albania(ctx):
 
@@ -2135,7 +2246,7 @@ async def reserve_Albania(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2157,6 +2268,10 @@ async def reserve_Albania(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Albania!")
+
 @client.command()
 async def reserve_Greece(ctx):
 
@@ -2166,7 +2281,7 @@ async def reserve_Greece(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2188,6 +2303,10 @@ async def reserve_Greece(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Greece!")
+
 @client.command()
 async def reserve_Turkey(ctx):
 
@@ -2197,7 +2316,7 @@ async def reserve_Turkey(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2219,6 +2338,10 @@ async def reserve_Turkey(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Turkey!")
+
 @client.command()
 async def reserve_Spain(ctx):
 
@@ -2228,7 +2351,7 @@ async def reserve_Spain(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2250,6 +2373,10 @@ async def reserve_Spain(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Spain!")
+
 @client.command()
 async def reserve_Portugal(ctx):
 
@@ -2259,7 +2386,7 @@ async def reserve_Portugal(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2281,6 +2408,10 @@ async def reserve_Portugal(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Portugal!")
+
 @client.command()
 async def reserve_Switzerland(ctx):
 
@@ -2290,7 +2421,7 @@ async def reserve_Switzerland(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2312,6 +2443,10 @@ async def reserve_Switzerland(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Switzerland!")
+
 #Americas   
     
 @client.command()
@@ -2323,7 +2458,7 @@ async def reserve_Argentina(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2345,6 +2480,10 @@ async def reserve_Argentina(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Argentina!")
+
 @client.command()
 async def reserve_Bolivia(ctx):
 
@@ -2354,7 +2493,7 @@ async def reserve_Bolivia(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2376,6 +2515,10 @@ async def reserve_Bolivia(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Bolivia!")
+
 @client.command()
 async def reserve_Brazil(ctx):
 
@@ -2385,7 +2528,7 @@ async def reserve_Brazil(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2407,6 +2550,10 @@ async def reserve_Brazil(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Brazil!")
+
 @client.command()
 async def reserve_Chile(ctx):
 
@@ -2416,7 +2563,7 @@ async def reserve_Chile(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2438,6 +2585,10 @@ async def reserve_Chile(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Chile!")
+
 @client.command()
 async def reserve_Colombia(ctx):
 
@@ -2447,7 +2598,7 @@ async def reserve_Colombia(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2469,6 +2620,10 @@ async def reserve_Colombia(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Colombia!")
+
 @client.command()
 async def reserve_Cuba(ctx):
 
@@ -2478,7 +2633,7 @@ async def reserve_Cuba(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2500,6 +2655,10 @@ async def reserve_Cuba(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Cuba!")
+
 @client.command()
 async def reserve_Dominica(ctx):
 
@@ -2509,7 +2668,7 @@ async def reserve_Dominica(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2531,6 +2690,10 @@ async def reserve_Dominica(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Dominica!")
+
 @client.command()
 async def reserve_Ecuador(ctx):
 
@@ -2540,7 +2703,7 @@ async def reserve_Ecuador(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2562,6 +2725,10 @@ async def reserve_Ecuador(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Ecuador!")
+
 @client.command()
 async def reserve_El_Salvador(ctx):
 
@@ -2571,7 +2738,7 @@ async def reserve_El_Salvador(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2593,6 +2760,10 @@ async def reserve_El_Salvador(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for El Salvador!")
+
 @client.command()
 async def reserve_Guatamela(ctx):
 
@@ -2602,7 +2773,7 @@ async def reserve_Guatamela(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2624,6 +2795,10 @@ async def reserve_Guatamela(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Guatamela!")
+
 @client.command()
 async def reserve_Haiti(ctx):
 
@@ -2633,7 +2808,7 @@ async def reserve_Haiti(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2655,6 +2830,10 @@ async def reserve_Haiti(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Haiti!")
+
 @client.command()
 async def reserve_Honduras(ctx):
 
@@ -2664,7 +2843,7 @@ async def reserve_Honduras(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2686,6 +2865,10 @@ async def reserve_Honduras(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Honduras!")
+
 @client.command()
 async def reserve_Mexico(ctx):
 
@@ -2695,7 +2878,7 @@ async def reserve_Mexico(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2717,6 +2900,10 @@ async def reserve_Mexico(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Mexico!")
+
 @client.command()
 async def reserve_Paraguay(ctx):
 
@@ -2726,7 +2913,7 @@ async def reserve_Paraguay(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2748,6 +2935,10 @@ async def reserve_Paraguay(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Paraguay!")
+
 @client.command()
 async def reserve_Peru(ctx):
 
@@ -2757,7 +2948,7 @@ async def reserve_Peru(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2779,6 +2970,10 @@ async def reserve_Peru(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Peru!")
+
 @client.command()
 async def reserve_Uruguay(ctx):
 
@@ -2788,7 +2983,7 @@ async def reserve_Uruguay(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2809,6 +3004,10 @@ async def reserve_Uruguay(ctx):
 
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Uruguay!")
     
 @client.command()
 async def reserve_Venezuela(ctx):
@@ -2819,7 +3018,7 @@ async def reserve_Venezuela(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2840,6 +3039,10 @@ async def reserve_Venezuela(ctx):
 
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Venezuela!")
     
 @client.command()
 async def reserve_Panama(ctx):
@@ -2850,7 +3053,7 @@ async def reserve_Panama(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2871,6 +3074,10 @@ async def reserve_Panama(ctx):
 
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Panama!")
     
 @client.command()
 async def reserve_Costa_Rica(ctx):
@@ -2881,7 +3088,7 @@ async def reserve_Costa_Rica(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2902,6 +3109,10 @@ async def reserve_Costa_Rica(ctx):
 
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Costa Rica!")
     
 @client.command()
 async def reserve_Nicaragua(ctx):
@@ -2912,7 +3123,7 @@ async def reserve_Nicaragua(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2933,6 +3144,10 @@ async def reserve_Nicaragua(ctx):
 
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Nicaragua!")
     
 @client.command()
 async def reserve_Canada(ctx):
@@ -2943,7 +3158,7 @@ async def reserve_Canada(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2965,6 +3180,10 @@ async def reserve_Canada(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Canada!")
+
 #Asia
 
 @client.command()
@@ -2976,7 +3195,7 @@ async def reserve_Tannu_Tuva(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2998,6 +3217,10 @@ async def reserve_Tannu_Tuva(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Tannu Tuva!")
+
 @client.command()
 async def reserve_Mongolia(ctx):
 
@@ -3007,7 +3230,7 @@ async def reserve_Mongolia(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3028,6 +3251,10 @@ async def reserve_Mongolia(ctx):
 
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Mongolia!")
     
 @client.command()
 async def reserve_Manchukuo(ctx):
@@ -3038,7 +3265,7 @@ async def reserve_Manchukuo(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3059,6 +3286,10 @@ async def reserve_Manchukuo(ctx):
 
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Manchukuo!")
     
 @client.command()
 async def reserve_Mengkukuo(ctx):
@@ -3069,7 +3300,7 @@ async def reserve_Mengkukuo(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3090,6 +3321,10 @@ async def reserve_Mengkukuo(ctx):
 
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Mengkukuo!")
     
 @client.command()
 async def reserve_PRC(ctx):
@@ -3100,7 +3335,7 @@ async def reserve_PRC(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3121,6 +3356,10 @@ async def reserve_PRC(ctx):
 
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for the PRC!")
     
 @client.command()
 async def reserve_Indochina(ctx):
@@ -3131,7 +3370,7 @@ async def reserve_Indochina(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3152,6 +3391,10 @@ async def reserve_Indochina(ctx):
 
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for French Indochina!")
     
 @client.command()
 async def reserve_Siam(ctx):
@@ -3162,7 +3405,7 @@ async def reserve_Siam(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3183,6 +3426,10 @@ async def reserve_Siam(ctx):
 
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Siam!")
     
 @client.command()
 async def reserve_British_Raj(ctx):
@@ -3193,7 +3440,7 @@ async def reserve_British_Raj(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3214,6 +3461,10 @@ async def reserve_British_Raj(ctx):
 
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for the British Raj!")
     
 @client.command()
 async def reserve_Australia(ctx):
@@ -3224,7 +3475,7 @@ async def reserve_Australia(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3245,6 +3496,10 @@ async def reserve_Australia(ctx):
 
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Australia!")
     
 @client.command()
 async def reserve_Malaya(ctx):
@@ -3255,7 +3510,7 @@ async def reserve_Malaya(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3277,6 +3532,10 @@ async def reserve_Malaya(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
 
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Malaya!")
+
 @client.command()
 async def reserve_Indonesia(ctx):
 
@@ -3286,7 +3545,7 @@ async def reserve_Indonesia(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3307,6 +3566,10 @@ async def reserve_Indonesia(ctx):
 
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for the Dutch East Indies!")
     
 @client.command()
 async def reserve_Afghanistan(ctx):
@@ -3317,7 +3580,7 @@ async def reserve_Afghanistan(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3339,6 +3602,10 @@ async def reserve_Afghanistan(ctx):
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
     
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Afghanistan!")
+
 @client.command()
 async def reserve_Iran(ctx):
 
@@ -3348,7 +3615,7 @@ async def reserve_Iran(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3369,6 +3636,10 @@ async def reserve_Iran(ctx):
 
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Iran!")
     
 @client.command()
 async def reserve_Iraq(ctx):
@@ -3379,7 +3650,7 @@ async def reserve_Iraq(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3400,6 +3671,10 @@ async def reserve_Iraq(ctx):
 
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Iraq!")
     
 @client.command()
 async def reserve_Palestine(ctx):
@@ -3410,7 +3685,7 @@ async def reserve_Palestine(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3431,6 +3706,10 @@ async def reserve_Palestine(ctx):
 
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Palestine!")
     
 @client.command()
 async def reserve_Egypt(ctx):
@@ -3441,7 +3720,7 @@ async def reserve_Egypt(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3462,6 +3741,10 @@ async def reserve_Egypt(ctx):
 
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Egypt!")
     
 @client.command()
 async def reserve_South_Africa(ctx):
@@ -3472,7 +3755,7 @@ async def reserve_South_Africa(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3493,6 +3776,10 @@ async def reserve_South_Africa(ctx):
 
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for South Africa!")
     
 @client.command()
 async def reserve_Ethiopia(ctx):
@@ -3503,7 +3790,7 @@ async def reserve_Ethiopia(ctx):
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3524,6 +3811,10 @@ async def reserve_Ethiopia(ctx):
 
     role = discord.utils.get(message.guild.roles, name="Game")
     await ctx.author.add_roles(role)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{author}> You're now reserved for Ethiopia!")
     
 
 #Ending
@@ -3531,7 +3822,7 @@ async def reserve_Ethiopia(ctx):
 @client.command()
 async def endhost(ctx):
 
-    channel = client.get_channel(1229703484992000032)
+    channel = client.get_channel(1235632818814718005)
 
     role = discord.utils.get(ctx.guild.roles, name="Host")
     if role in ctx.author.roles:
