@@ -1,15 +1,14 @@
-import os
 from sys import argv
 import discord
 from discord import app_commands
 from discord.ext import commands
 from discord.utils import get
 
-os.chdir('E:\Programs\Guardian-Bot')
-
 intents = discord.Intents.all()
 client = commands.Bot(command_prefix='!', intents = intents)
 tree = app_commands.CommandTree
+
+client.remove_command('help')
 
 global usa_res
 usa_res = False
@@ -32,17 +31,210 @@ italy_res = False
 global ussr_res
 ussr_res = False
 
+global poland_res
+poland_res = False
+
 global china_res
 china_res = False
 
-global poland_res
-poland_res = False
+global sweden_res
+sweden_res = False
+
+global norway_res
+norway_res = False
+
+global finland_res
+finland_res = False
+
+global denmark_res
+denmark_res = False
+
+global estonia_res
+estonia_res = False
+
+global latvia_res
+latvia_res = False
+
+global lithuania_res
+lithuania_res = False
+
+global netherlands_res
+netherlands_res = False
+
+global belgium_res
+belgium_res = False
+
+global luxembourg_res
+luxembourg_res = False
+
+global ireland_res
+ireland_res = False
+
+global iceland_res
+iceland_res = False
+
+global czechoslovakia_res
+czechoslovakia_res = False
+
+global austria_res
+austria_res = False
+
+global hungary_res
+hungary_res = False
+
+global romania_res
+romania_res = False
+
+global yugoslavia_res
+yugoslavia_res = False
+
+global bulgaria_res
+bulgaria_res = False
+
+global albania_res
+albania_res = False
+
+global greece_res
+greece_res = False
+
+global turkey_res
+turkey_res = False
+
+global spain_res
+spain_res = False
+
+global portugal_res
+portugal_res = False
+
+global switzerland_res
+switzerland_res = False
+
+#americas
+
+global argentina_res
+argentina_res = False
+
+global bolivia_res
+bolivia_res = False
+
+global brazil_res
+brazil_res = False
+
+global chile_res
+chile_res = False
+
+global colombia_res
+colombia_res = False
+
+global cuba_res
+cuba_res = False
+
+global dominica_res
+dominica_res = False
+
+global ecuador_res
+ecuador_res = False
+
+global elsalvador_res
+elsalvador_res = False
+
+global guatamela_res
+guatamela_res = False
+
+global haiti_res
+haiti_res = False
+
+global honduras_res
+honduras_res = False
+
+global mexico_res
+mexico_res = False
+
+global paraguay_res
+paraguay_res = False
+
+global peru_res
+peru_res = False
+
+global uruguay_res
+uruguay_res = False
+
+global venezuela_res
+venezuela_res = False
+
+global panama_res
+panama_res = False
+
+global costarica_res
+costarica_res = False
+
+global nicaragua_res
+nicaragua_res = False
+
+global canada_res
+canada_res = False
+
+#asia and africa
+
+global tannutuva_res
+tannutuva_res = False
+
+global mongolia_res
+mongolia_res = False
+
+global manchukuo_res
+manchukuo_res = False
+
+global mengkukuo_res
+mengkukuo_res = False
+
+global prc_res
+prc_res = False
+
+global indochina_res
+indochina_res = False
+
+global siam_res
+siam_res = False
+
+global britishraj_res
+britishraj_res = False
+
+global australia_res
+australia_res = False
+
+global malaya_res
+malaya_res = False
+
+global indonesia_res
+indonesia_res = False
+
+global afghanistan_res
+afghanistan_res = False
+
+global iran_res
+iran_res = False
+
+global iraq_res
+iraq_res = False
+
+global palestine_res
+palestine_res = False
+
+global egypt_res
+egypt_res = False
+
+global southafrica_res
+southafrica_res = False
+
+global ethiopia_res
+ethiopia_res = False
 
 @client.event
 async def on_ready():
     print("The bot is now ready")
     try:
-        synced = await tree.sync(guild=discord.Object(id=1210361385112961024))
+        synced = await tree.sync(guild=discord.Object(id=1201569190826483812))
         print(f"Synced {len(synced)} command(s)")
     except Exception as e:
         print(e)
@@ -68,7 +260,7 @@ async def host(ctx, time=None):
     with open('message0.txt', 'w') as f:
         f.write(str(message.id))
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message0.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -83,7 +275,7 @@ async def host(ctx, time=None):
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message0.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -98,7 +290,7 @@ async def host(ctx, time=None):
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message0.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -113,7 +305,7 @@ async def host(ctx, time=None):
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message0.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -164,8 +356,8 @@ async def host(ctx, time=None):
     with open('message4.txt', 'w') as f:
         f.write(str(message.id))
 
-    channel = client.get_channel(1235632818814718005)
-    message = await channel.send("To reserve, do '!reserve_(nation)' in any chat. The command is case-sensitive! To unreserve, do !unreserve. The bot is slow, by the way.")
+    channel = client.get_channel(1201575035706548445)
+    message = await channel.send("To reserve, do '!reserve_Nation' in any chat. The command is case-sensitive! To unreserve, do !unreserve. The bot is slow, by the way.")
     with open('message5.txt', 'w') as f:
         f.write(str(message.id))
     
@@ -177,7 +369,7 @@ async def unreserve(ctx):
     channel = client.get_channel(int(this_channel))
     await channel.send(f"<@{ctx.author.id}> Please wait...")
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -194,7 +386,7 @@ async def unreserve(ctx):
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -206,10 +398,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(1, name=uk_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global uk_res
+        uk_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -221,10 +415,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(2, name=france_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global france_res
+        france_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -236,10 +432,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(3, name=germany_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global germany_res
+        germany_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -251,10 +449,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(4, name=japan_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global japan_res
+        japan_res = False
     else:
         pass
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -266,10 +466,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(5, name=italy_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global italy_res
+        italy_res = False
     else:
         pass
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -281,10 +483,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(6, name=ussr_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global ussr_res
+        ussr_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -296,10 +500,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(7, name=poland_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global poland_res
+        poland_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -311,12 +517,14 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(8, name=china_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global china_res
+        china_res = False
     else:
         pass
 
     #Europe Minors
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -328,10 +536,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(0, name=sweden_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global sweden_res
+        sweden_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -343,10 +553,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(1, name=norway_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global norway_res
+        norway_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -358,10 +570,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(2, name=finland_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global finland_res
+        finland_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -373,10 +587,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(3, name=denmark_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global denmark_res
+        denmark_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -388,10 +604,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(4, name=estonia_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global estonia_res
+        estonia_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -403,10 +621,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(5, name=latvia_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global latvia_res
+        latvia_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -418,10 +638,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(6, name=lithuania_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global lithuania_res
+        lithuania_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -433,10 +655,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(7, name=netherlands_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global netherlands_res
+        netherlands_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -448,10 +672,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(8, name=belgium_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global belgium_res
+        belgium_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -463,10 +689,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(9, name=luxembourg_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global luxembourg_res
+        luxembourg_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -478,10 +706,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(10, name=ireland_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global ireland_res
+        ireland_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -493,10 +723,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(11, name=iceland_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global iceland_res
+        iceland_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -508,10 +740,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(12, name=czechoslovakia_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global czechoslovakia_res
+        czechoslovakia_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -523,10 +757,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(13, name=austria_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global austria_res
+        austria_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -538,10 +774,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(14, name=hungary_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global hungary_res
+        hungary_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -553,10 +791,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(15, name=romania_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global romania_res
+        romania_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -568,10 +808,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(16, name=yugoslavia_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global yugoslavia_res
+        yugoslavia_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -583,10 +825,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(17, name=bulgaria_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global bulgaria_res
+        bulgaria_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -598,10 +842,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(18, name=albania_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global albania_res
+        albania_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -613,10 +859,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(19, name=greece_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global greece_res
+        greece_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -628,10 +876,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(20, name=turkey_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global turkey_res
+        turkey_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -643,10 +893,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(21, name=spain_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global spain_res
+        spain_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -658,10 +910,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(22, name=portugal_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global portugal_res
+        portugal_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -673,10 +927,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(23, name=switzerland_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global switzerland_res
+        switzerland_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -688,10 +944,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(0, name=argentina_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global argentina_res
+        argentina_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -703,10 +961,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(1, name=bolivia_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global bolivia_res
+        bolivia_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -718,10 +978,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(2, name=brazil_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global brazil_res
+        brazil_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -733,10 +995,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(3, name=chile_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global chile_res
+        chile_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -748,10 +1012,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(4, name=colombia_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global colombia_res
+        colombia_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -763,10 +1029,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(5, name=cuba_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global cuba_res
+        cuba_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -778,10 +1046,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(6, name=dominica_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global dominica_res
+        dominica_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -793,10 +1063,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(7, name=ecuador_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global ecuador_res
+        ecuador_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -808,10 +1080,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(8, name=elsalvador_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global elsalvador_res
+        elsalvador_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -823,10 +1097,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(9, name=guatamela_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global guatamela_res
+        guatamela_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -838,10 +1114,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(10, name=haiti_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global haiti_res
+        haiti_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -853,10 +1131,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(11, name=honduras_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global honduras_res
+        honduras_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -868,10 +1148,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(12, name=mexico_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global mexico_res
+        mexico_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -883,10 +1165,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(13, name=paraguay_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global paraguay_res
+        paraguay_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -898,10 +1182,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(14, name=peru_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global peru_res
+        peru_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -913,10 +1199,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(15, name=uruguay_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global uruguay_res
+        uruguay_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -928,10 +1216,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(16, name=venezuela_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global venezuela_res
+        venezuela_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -943,10 +1233,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(17, name=panama_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global panama_res
+        panama_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -958,10 +1250,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(18, name=costarica_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global costarica_res
+        costarica_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -973,10 +1267,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(19, name=nicaragua_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global nicaragua_res
+        nicaragua_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -988,10 +1284,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(20, name=canada_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global canada_res
+        canada_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1003,10 +1301,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(0, name=tannutuva_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global tannutuva_res
+        tannutuva_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1018,10 +1318,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(1, name=mongolia_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global mongolia_res
+        mongolia_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1033,10 +1335,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(2, name=manchukuo_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global manchukuo_res
+        manchukuo_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1048,10 +1352,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(3, name=mengkukuo_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global mengkukuo_res
+        mengkukuo_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1063,10 +1369,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(4, name=prc_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global prc_res
+        prc_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1078,10 +1386,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(5, name=indochina_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global indochina_res
+        indochina_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1093,10 +1403,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(6, name=siam_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global siam_res
+        siam_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1108,10 +1420,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(7, name=britishraj_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global britishraj_res
+        britishraj_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1123,10 +1437,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(8, name=australia_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global australia_res
+        australia_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1138,10 +1454,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(9, name=malaya_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global malaya_res
+        malaya_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1153,10 +1471,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(10, name=indonesia_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global indonesia_res
+        indonesia_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1168,10 +1488,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(11, name=afghanistan_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global afghanistan_res
+        afghanistan_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1183,10 +1505,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(12, name=iran_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global iran_res
+        iran_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1198,10 +1522,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(13, name=iraq_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global iraq_res
+        iraq_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1213,10 +1539,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(14, name=palestine_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global palestine_res
+        palestine_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1228,10 +1556,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(15, name=egypt_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global egypt_res
+        egypt_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1243,10 +1573,12 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(16, name=southafrica_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global southafrica_res
+        southafrica_res = False
     else:
         pass
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1258,6 +1590,8 @@ async def unreserve(ctx):
         new_value = "N/A"
         country_embed.insert_field_at(17, name=ethiopia_field.name, value=new_value)
         await message.edit(embed=country_embed)
+        global ethiopia_res
+        ethiopia_res = False
     else:
         pass
 
@@ -1282,6 +1616,12 @@ async def unreserve(ctx):
 @client.command()
 async def reserve_USA(ctx):
 
+    author = (ctx.author.id)
+    with open("ReservedUsers.txt") as f:
+        if str(author) in f.read():
+            await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
+            return
+        
     global usa_res
 
     if usa_res == True:
@@ -1291,15 +1631,8 @@ async def reserve_USA(ctx):
         return
     else:
         usa_res = True
-
-
-    author = (ctx.author.id)
-    with open("ReservedUsers.txt") as f:
-        if str(author) in f.read():
-            await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
-            return
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1328,13 +1661,25 @@ async def reserve_USA(ctx):
 @client.command()
 async def reserve_UK(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
         
-    channel = client.get_channel(1235632818814718005)
+    global uk_res
+
+    if uk_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        uk_res = True
+        
+    channel = client.get_channel(1201575035706548445)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1363,13 +1708,25 @@ async def reserve_UK(ctx):
 @client.command()
 async def reserve_France(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global france_res
+
+    if france_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        france_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1398,13 +1755,25 @@ async def reserve_France(ctx):
 @client.command()
 async def reserve_Germany(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global germany_res
+
+    if germany_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        germany_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1433,13 +1802,25 @@ async def reserve_Germany(ctx):
 @client.command()
 async def reserve_Japan(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global japan_res
+
+    if japan_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        japan_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1468,13 +1849,25 @@ async def reserve_Japan(ctx):
 @client.command()
 async def reserve_Italy(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global italy_res
+
+    if italy_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        italy_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1503,13 +1896,25 @@ async def reserve_Italy(ctx):
 @client.command()
 async def reserve_USSR(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
     
-    channel = client.get_channel(1235632818814718005)
+    global ussr_res
+
+    if ussr_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        ussr_res = True
+
+    channel = client.get_channel(1201575035706548445)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1538,13 +1943,25 @@ async def reserve_USSR(ctx):
 @client.command()
 async def reserve_Poland(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global poland_res
+
+    if poland_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        poland_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1573,13 +1990,25 @@ async def reserve_Poland(ctx):
 @client.command()
 async def reserve_China(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global china_res
+
+    if china_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        china_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1610,13 +2039,25 @@ async def reserve_China(ctx):
 @client.command()
 async def reserve_Sweden(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global sweden_res
+
+    if sweden_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        sweden_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1645,13 +2086,25 @@ async def reserve_Sweden(ctx):
 @client.command()
 async def reserve_Norway(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global norway_res
+
+    if norway_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        norway_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1680,13 +2133,25 @@ async def reserve_Norway(ctx):
 @client.command()
 async def reserve_Finland(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global finland_res
+
+    if finland_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        finland_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1715,13 +2180,25 @@ async def reserve_Finland(ctx):
 @client.command()
 async def reserve_Denmark(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global denmark_res
+
+    if denmark_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        denmark_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1750,13 +2227,25 @@ async def reserve_Denmark(ctx):
 @client.command()
 async def reserve_Estonia(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global estonia_res
+
+    if estonia_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        estonia_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1785,13 +2274,25 @@ async def reserve_Estonia(ctx):
 @client.command()
 async def reserve_Latvia(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global latvia_res
+
+    if latvia_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        latvia_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1820,13 +2321,25 @@ async def reserve_Latvia(ctx):
 @client.command()
 async def reserve_Lithuania(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global lithuania_res
+
+    if lithuania_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        lithuania_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1855,13 +2368,25 @@ async def reserve_Lithuania(ctx):
 @client.command()
 async def reserve_Netherlands(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global netherlands_res
+
+    if netherlands_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        netherlands_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1890,13 +2415,25 @@ async def reserve_Netherlands(ctx):
 @client.command()
 async def reserve_Belgium(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global belgium_res
+
+    if belgium_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        belgium_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1925,13 +2462,25 @@ async def reserve_Belgium(ctx):
 @client.command()
 async def reserve_Luxembourg(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global luxembourg_res
+
+    if luxembourg_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        luxembourg_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1960,13 +2509,25 @@ async def reserve_Luxembourg(ctx):
 @client.command()
 async def reserve_Ireland(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global ireland_res
+
+    if ireland_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        ireland_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -1995,13 +2556,25 @@ async def reserve_Ireland(ctx):
 @client.command()
 async def reserve_Iceland(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global iceland_res
+
+    if iceland_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        iceland_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2030,13 +2603,25 @@ async def reserve_Iceland(ctx):
 @client.command()
 async def reserve_Czechoslovakia(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global czechoslovakia_res
+
+    if czechoslovakia_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        czechoslovakia_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2065,13 +2650,25 @@ async def reserve_Czechoslovakia(ctx):
 @client.command()
 async def reserve_Austria(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global austria_res
+
+    if austria_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        austria_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2100,13 +2697,25 @@ async def reserve_Austria(ctx):
 @client.command()
 async def reserve_Hungary(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global hungary_res
+
+    if hungary_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        hungary_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2135,13 +2744,25 @@ async def reserve_Hungary(ctx):
 @client.command()
 async def reserve_Romania(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global romania_res
+
+    if romania_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        romania_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2170,13 +2791,25 @@ async def reserve_Romania(ctx):
 @client.command()
 async def reserve_Yugoslavia(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global yugoslavia_res
+
+    if yugoslavia_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        yugoslavia_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2205,13 +2838,25 @@ async def reserve_Yugoslavia(ctx):
 @client.command()
 async def reserve_Bulgaria(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global bulgaria_res
+
+    if bulgaria_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        bulgaria_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2240,13 +2885,25 @@ async def reserve_Bulgaria(ctx):
 @client.command()
 async def reserve_Albania(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global albania_res
+
+    if albania_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        albania_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2275,13 +2932,25 @@ async def reserve_Albania(ctx):
 @client.command()
 async def reserve_Greece(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global greece_res
+
+    if greece_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        greece_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2310,13 +2979,25 @@ async def reserve_Greece(ctx):
 @client.command()
 async def reserve_Turkey(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global turkey_res
+
+    if turkey_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        turkey_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2345,13 +3026,25 @@ async def reserve_Turkey(ctx):
 @client.command()
 async def reserve_Spain(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global spain_res
+
+    if spain_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        spain_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2380,13 +3073,25 @@ async def reserve_Spain(ctx):
 @client.command()
 async def reserve_Portugal(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global portugal_res
+
+    if portugal_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        portugal_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2415,13 +3120,25 @@ async def reserve_Portugal(ctx):
 @client.command()
 async def reserve_Switzerland(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global switzerland_res
+
+    if switzerland_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        switzerland_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message2.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2452,13 +3169,25 @@ async def reserve_Switzerland(ctx):
 @client.command()
 async def reserve_Argentina(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global argentina_res
+
+    if argentina_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        argentina_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2487,13 +3216,25 @@ async def reserve_Argentina(ctx):
 @client.command()
 async def reserve_Bolivia(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global bolivia_res
+
+    if bolivia_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        bolivia_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2522,13 +3263,25 @@ async def reserve_Bolivia(ctx):
 @client.command()
 async def reserve_Brazil(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global brazil_res
+
+    if brazil_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        brazil_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2557,13 +3310,25 @@ async def reserve_Brazil(ctx):
 @client.command()
 async def reserve_Chile(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global chile_res
+
+    if chile_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        chile_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2592,13 +3357,25 @@ async def reserve_Chile(ctx):
 @client.command()
 async def reserve_Colombia(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global colombia_res
+
+    if colombia_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        colombia_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2627,13 +3404,25 @@ async def reserve_Colombia(ctx):
 @client.command()
 async def reserve_Cuba(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global cuba_res
+
+    if cuba_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        cuba_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2662,13 +3451,25 @@ async def reserve_Cuba(ctx):
 @client.command()
 async def reserve_Dominica(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global dominica_res
+
+    if dominica_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        dominica_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2697,13 +3498,25 @@ async def reserve_Dominica(ctx):
 @client.command()
 async def reserve_Ecuador(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global ecuador_res
+
+    if ecuador_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        ecuador_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2732,13 +3545,25 @@ async def reserve_Ecuador(ctx):
 @client.command()
 async def reserve_El_Salvador(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global elsalvador_res
+
+    if elsalvador_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        elsalvador_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2767,13 +3592,25 @@ async def reserve_El_Salvador(ctx):
 @client.command()
 async def reserve_Guatamela(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global guatamela_res
+
+    if guatamela_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        guatamela_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2802,13 +3639,25 @@ async def reserve_Guatamela(ctx):
 @client.command()
 async def reserve_Haiti(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global haiti_res
+
+    if haiti_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        haiti_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2837,13 +3686,25 @@ async def reserve_Haiti(ctx):
 @client.command()
 async def reserve_Honduras(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global honduras_res
+
+    if honduras_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        honduras_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2872,13 +3733,25 @@ async def reserve_Honduras(ctx):
 @client.command()
 async def reserve_Mexico(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global mexico_res
+
+    if mexico_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        mexico_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2907,13 +3780,25 @@ async def reserve_Mexico(ctx):
 @client.command()
 async def reserve_Paraguay(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global paraguay_resres
+
+    if paraguay_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        paraguay_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2942,13 +3827,25 @@ async def reserve_Paraguay(ctx):
 @client.command()
 async def reserve_Peru(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global peru_res
+
+    if peru_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        peru_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -2977,13 +3874,25 @@ async def reserve_Peru(ctx):
 @client.command()
 async def reserve_Uruguay(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global uruguay_res
+
+    if uruguay_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        uruguay_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3012,13 +3921,25 @@ async def reserve_Uruguay(ctx):
 @client.command()
 async def reserve_Venezuela(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global venezuela_res
+
+    if venezuela_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        venezuela_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3047,13 +3968,25 @@ async def reserve_Venezuela(ctx):
 @client.command()
 async def reserve_Panama(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global panama_res
+
+    if panama_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        panama_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3082,13 +4015,25 @@ async def reserve_Panama(ctx):
 @client.command()
 async def reserve_Costa_Rica(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global costarica_res
+
+    if costarica_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        costarica_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3117,13 +4062,25 @@ async def reserve_Costa_Rica(ctx):
 @client.command()
 async def reserve_Nicaragua(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global nicaragua_res
+
+    if nicaragua_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        nicaragua_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3152,13 +4109,25 @@ async def reserve_Nicaragua(ctx):
 @client.command()
 async def reserve_Canada(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global canada_res
+
+    if canada_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        canada_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message3.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3189,13 +4158,25 @@ async def reserve_Canada(ctx):
 @client.command()
 async def reserve_Tannu_Tuva(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global tannutuva_res
+
+    if tannutuva_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        tannutuva_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3224,13 +4205,25 @@ async def reserve_Tannu_Tuva(ctx):
 @client.command()
 async def reserve_Mongolia(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global mongolia_res
+
+    if mongolia_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        mongolia_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3259,13 +4252,25 @@ async def reserve_Mongolia(ctx):
 @client.command()
 async def reserve_Manchukuo(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global manchukuo_res
+
+    if manchukuo_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        manchukuo_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3294,13 +4299,25 @@ async def reserve_Manchukuo(ctx):
 @client.command()
 async def reserve_Mengkukuo(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global mengkukuo_res
+
+    if mengkukuo_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        mengkukuo_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3329,13 +4346,25 @@ async def reserve_Mengkukuo(ctx):
 @client.command()
 async def reserve_PRC(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global prc_res
+
+    if prc_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        prc_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3364,13 +4393,25 @@ async def reserve_PRC(ctx):
 @client.command()
 async def reserve_Indochina(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global indochina_res
+
+    if indochina_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        indochina_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3399,13 +4440,25 @@ async def reserve_Indochina(ctx):
 @client.command()
 async def reserve_Siam(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global siam_res
+
+    if siam_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        siam_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3434,13 +4487,25 @@ async def reserve_Siam(ctx):
 @client.command()
 async def reserve_British_Raj(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global britishraj_res
+
+    if britishraj_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        britishraj_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3469,13 +4534,25 @@ async def reserve_British_Raj(ctx):
 @client.command()
 async def reserve_Australia(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global australia_res
+
+    if australia_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        australia_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3504,13 +4581,25 @@ async def reserve_Australia(ctx):
 @client.command()
 async def reserve_Malaya(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global malaya_res
+
+    if malaya_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        malaya_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3539,13 +4628,25 @@ async def reserve_Malaya(ctx):
 @client.command()
 async def reserve_Indonesia(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global indonesia_res
+
+    if indonesia_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        indonesia_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3574,13 +4675,25 @@ async def reserve_Indonesia(ctx):
 @client.command()
 async def reserve_Afghanistan(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global afghanistan_res
+
+    if afghanistan_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        afghanistan_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3609,13 +4722,25 @@ async def reserve_Afghanistan(ctx):
 @client.command()
 async def reserve_Iran(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global iran_res
+
+    if iran_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        iran_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3644,13 +4769,25 @@ async def reserve_Iran(ctx):
 @client.command()
 async def reserve_Iraq(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global iraq_res
+
+    if iraq_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        iraq_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3679,13 +4816,25 @@ async def reserve_Iraq(ctx):
 @client.command()
 async def reserve_Palestine(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global palestine_res
+
+    if palestine_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        palestine_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3714,13 +4863,25 @@ async def reserve_Palestine(ctx):
 @client.command()
 async def reserve_Egypt(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global egypt_res
+
+    if egypt_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        egypt_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3754,8 +4915,18 @@ async def reserve_South_Africa(ctx):
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global southafrica_res
+
+    if southafrica_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        southafrica_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3784,13 +4955,25 @@ async def reserve_South_Africa(ctx):
 @client.command()
 async def reserve_Ethiopia(ctx):
 
+
+
     author = (ctx.author.id)
     with open("ReservedUsers.txt") as f:
         if str(author) in f.read():
             await ctx.send(f"<@{ctx.author.id}> You're already reserved, dum-dum :joy:")
             return
+        
+    global ethiopia_res
+
+    if ethiopia_res == True:
+        this_channel = ctx.channel.id
+        channel = client.get_channel(int(this_channel))
+        await channel.send(f"<@{ctx.author.id}> TAKEN!")
+        return
+    else:
+        ethiopia_res = True
     
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
     with open("message4.txt", "r") as f:
         message_id = int(f.read())
     message = await channel.fetch_message(message_id)
@@ -3815,6 +4998,50 @@ async def reserve_Ethiopia(ctx):
     this_channel = ctx.channel.id
     channel = client.get_channel(int(this_channel))
     await channel.send(f"<@{author}> You're now reserved for Ethiopia!")
+
+@client.command()
+async def unreserve_Poland(ctx, user=None):
+
+    role = discord.utils.get(ctx.guild.roles, name="Host")
+    if role in ctx.author.roles:
+        pass
+    else:
+        await ctx.send(f"<@{ctx.author.id}> You need Host role to do this!")
+        return
+        
+    global ethiopia_res
+    ethiopia_res = False
+    
+    channel = client.get_channel(1201575035706548445)
+    with open("message.txt", "r") as f:
+        message_id = int(f.read())
+    message = await channel.fetch_message(message_id)
+
+    country_embed = message.embeds[0]
+    poland_field = country_embed.fields[7]
+    country_embed.remove_field(7)
+    new_value = ""
+    if poland_field.value == (f"<@{user}>"):
+        new_value = "N/A"
+        country_embed.insert_field_at(7, name=poland_field.name, value=new_value)
+        await message.edit(embed=country_embed)
+    else:
+        pass
+
+    guild = discord.utils.get(client.guilds, name="Guardian")
+    role = discord.utils.get(guild.roles, name="Game")
+    await ctx.author.remove_roles(role)
+
+    with open(f"ReservedUsers.txt", "r") as f:
+        lines = f.readlines()
+    with open(f"ReservedUsers.txt", "w") as f:
+        for line in lines:
+            if line.strip("\n") != str(user):
+                f.write(line)
+
+    this_channel = ctx.channel.id
+    channel = client.get_channel(int(this_channel))
+    await channel.send(f"<@{user}> Unreserved!")
     
 
 #Ending
@@ -3822,7 +5049,7 @@ async def reserve_Ethiopia(ctx):
 @client.command()
 async def endhost(ctx):
 
-    channel = client.get_channel(1235632818814718005)
+    channel = client.get_channel(1201575035706548445)
 
     role = discord.utils.get(ctx.guild.roles, name="Host")
     if role in ctx.author.roles:
@@ -3867,8 +5094,228 @@ async def endhost(ctx):
     role = discord.utils.get(ctx.message.guild.roles, name="Game")
     await role.delete()
 
+    global usa_res
+    usa_res = False
 
-BOTTOKEN = ('MTIxMDM2Mzc3ODM0MDc0OTM4Mg.GfebOP.OpzDrJ2ccZjz0YvWsQAEgT0jEjvNCFH8kz3Tgk')
+    global uk_res
+    uk_res = False
+
+    global france_res
+    france_res = False
+
+    global germany_res
+    germany_res = False
+
+    global japan_res
+    japan_res = False
+
+    global italy_res
+    italy_res = False
+
+    global ussr_res
+    ussr_res = False
+
+    global poland_res
+    poland_res = False
+
+    global china_res
+    china_res = False
+
+    global sweden_res
+    sweden_res = False
+
+    global norway_res
+    norway_res = False
+
+    global finland_res
+    finland_res = False
+
+    global denmark_res
+    denmark_res = False
+
+    global estonia_res
+    estonia_res = False
+
+    global latvia_res
+    latvia_res = False
+
+    global lithuania_res
+    lithuania_res = False
+
+    global netherlands_res
+    netherlands_res = False
+
+    global belgium_res
+    belgium_res = False
+
+    global luxembourg_res
+    luxembourg_res = False
+
+    global ireland_res
+    ireland_res = False
+
+    global iceland_res
+    iceland_res = False
+
+    global czechoslovakia_res
+    czechoslovakia_res = False
+
+    global austria_res
+    austria_res = False
+
+    global hungary_res
+    hungary_res = False
+
+    global romania_res
+    romania_res = False
+
+    global yugoslavia_res
+    yugoslavia_res = False
+
+    global bulgaria_res
+    bulgaria_res = False
+
+    global albania_res
+    albania_res = False
+
+    global greece_res
+    greece_res = False
+
+    global turkey_res
+    turkey_res = False
+
+    global spain_res
+    spain_res = False
+
+    global portugal_res
+    portugal_res = False
+
+    global switzerland_res
+    switzerland_res = False
+
+    #americas
+
+    global argentina_res
+    argentina_res = False
+
+    global bolivia_res
+    bolivia_res = False
+
+    global brazil_res
+    brazil_res = False
+
+    global chile_res
+    chile_res = False
+
+    global colombia_res
+    colombia_res = False
+
+    global cuba_res
+    cuba_res = False
+
+    global dominica_res
+    dominica_res = False
+
+    global ecuador_res
+    ecuador_res = False
+
+    global elsalvador_res
+    elsalvador_res = False
+
+    global guatamela_res
+    guatamela_res = False
+
+    global haiti_res
+    haiti_res = False
+
+    global honduras_res
+    honduras_res = False
+
+    global mexico_res
+    mexico_res = False
+
+    global paraguay_res
+    paraguay_res = False
+
+    global peru_res
+    peru_res = False
+
+    global uruguay_res
+    uruguay_res = False
+
+    global venezuela_res
+    venezuela_res = False
+
+    global panama_res
+    panama_res = False
+
+    global costarica_res
+    costarica_res = False
+
+    global nicaragua_res
+    nicaragua_res = False
+
+    global canada_res
+    canada_res = False
+
+    #asia and africa
+
+    global tannutuva_res
+    tannutuva_res = False
+
+    global mongolia_res
+    mongolia_res = False
+
+    global manchukuo_res
+    manchukuo_res = False
+
+    global mengkukuo_res
+    mengkukuo_res = False
+
+    global prc_res
+    prc_res = False
+
+    global indochina_res
+    indochina_res = False
+
+    global siam_res
+    siam_res = False
+
+    global britishraj_res
+    britishraj_res = False
+
+    global australia_res
+    australia_res = False
+
+    global malaya_res
+    malaya_res = False
+
+    global indonesia_res
+    indonesia_res = False
+
+    global afghanistan_res
+    afghanistan_res = False
+
+    global iran_res
+    iran_res = False
+
+    global iraq_res
+    iraq_res = False
+
+    global palestine_res
+    palestine_res = False
+
+    global egypt_res
+    egypt_res = False
+
+    global southafrica_res
+    southafrica_res = False
+
+    global ethiopia_res
+    ethiopia_res = False
+
+
+BOTTOKEN = ('')
 
 
 client.run(BOTTOKEN)
